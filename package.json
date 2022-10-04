@@ -1,0 +1,19 @@
+{
+  "name": "report-reader",
+  "version": "1.0.0",
+  "description": "SIT725 Team project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kgjangid217/Report-Reader.git"
+  },
+  "author": "Kartik Jangid, Mohit Jurani, Akila Sooriyabandara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kgjangid217/Report-Reader/issues"
+  },
+  "homepage": "https://github.com/kgjangid217/Report-Reader#readme"
+}
