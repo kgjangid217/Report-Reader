@@ -1,0 +1,52 @@
+.navbar-size {
+    width: 95%;
+    margin: 0 auto;
+    background-color: #090909;
+}
+.nav-wrapper{
+    background-color: rgb(1, 30, 68);
+}
+.user-image-size {
+    height: 56px;
+    margin: 4px 0;
+}
+.main-body {
+    background-color: #000000;
+    color: rgba(0, 5, 40, 0.565);
+    height: calc(100vh - 64px);
+}
+#Suggested-med{
+    text-decoration-color: #808080;
+}
+.materialboxed-image {
+    margin: 0 auto;
+    height: 400px;
+}
+.click-me-button {
+    background-color: #090909;
+    margin-top: 50px;
+}
+.card-desc-color {
+    color: #808080;
+}
+.cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.card {
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+#prescription-box {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-direction: row;
+}
+#footer{
+    background-color: rgb(1, 30, 68);
+}
+.prescription-input {
+    margin: auto;
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Report Reader</title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Custom Style Sheet-->
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">Report Reader</a>
+          <ul class="right hide-on-med-and-down">
+            <a href = "index.html" class="waves-effect waves-light btn click-me-button modal-trigger">
+              <i class="material-icons left">home</i>Home</a>
+            <a href = "about.html" class="waves-effect waves-light btn click-me-button modal-trigger">
+              <i class="material-icons left">free_breakfast</i>About</a>
+            <a href="common.html" class="waves-effect waves-light btn click-me-button modal-trigger">
+              <i class="material-icons left">mood_bad</i>Disease Checker</a>
+          </ul>
+        </div>
+      </nav>
+
+    <main class="main-body">
+        <div class="carousel">
+          <a class="carousel-item" href="#one!"><img src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"></a>
+          <a class="carousel-item" href="#two!"><img src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"></a>
+          <a class="carousel-item" href="#three!"><img src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"></a>
+          <a class="carousel-item" href="#four!"><img src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"></a>
+          <a class="carousel-item" href="#five!"><img src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"></a>
+        </div>
+
+      <div style = "display: flex; justify-content: center; flex-direction: column;">
+        <div class="prescription-input">
+          <label for="recognition-image-input" style = "color: rgb(91, 91, 91); padding-right: 10px; padding-bottom: 10px; font-size: 1.2rem;">Upload image</label>
+          <input type="file" accept="image/jpeg, image/png" id="recognition-image-input" /><br/>
+          <div id="recognition-progress-text"></div>
+        </div>
+  
+        <div id="prescription-box">
+          <div>
+            <h4 style = "color: rgb(91, 91, 91)">
+              <p>
+                Suggested medicines:
+              </p>
+            </h4>
+            <div id="suggested-medicine" style="height: 300px; overflow: auto; text-decoration: grey;"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer" id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Report Reader</h5>
+            <p class="grey-text text-lighten-4">A platform to ease your search for the prescribed medicines</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="about.html">About Us</a></li>
+              <li><a class="grey-text text-lighten-3" href="common.html">Disease Checker</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2022 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
+
+  <script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
