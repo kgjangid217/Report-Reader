@@ -100,7 +100,7 @@
                 button1.style.backgroundColor = 'red';
                 button1.style.color = 'white';
             }
-            else(soreThroat == false)
+            else(soreThroat == true)
             checkDisease()
         })
 
@@ -111,7 +111,7 @@
                 button2.style.backgroundColor = 'red';
                 button2.style.color = 'white';
             }
-            else(lossOfTaste == false)
+            else(lossOfTaste == true)
             checkDisease()
         })
 
@@ -122,7 +122,7 @@
                 button3.style.backgroundColor = 'red';
                 button3.style.color = 'white';
             }
-            else(cough == false)
+            else(cough == true)
             checkDisease()    //calling it everytime to check if all the required symptoms(variables) are true as per the disease.
         })
 
@@ -133,7 +133,7 @@
                 button4.style.backgroundColor = 'red';
                 button4.style.color = 'white';
             }
-            else(fatigue == false)
+            else(fatigue == true)
             checkDisease()
         })
 
@@ -144,7 +144,7 @@
                 button5.style.backgroundColor = 'red';
                 button5.style.color = 'white';
             }
-            else(fever == false)
+            else(fever == true)
             checkDisease()
         })
 
@@ -155,7 +155,7 @@
                 button6.style.backgroundColor = 'red';
                 button6.style.color = 'white';
             }
-            else(blurryVision == false)
+            else(blurryVision == true)
             checkDisease()
         })
 
@@ -166,7 +166,7 @@
                 button7.style.backgroundColor = 'red';
                 button7.style.color = 'white';
             }
-            else(nausea == false)
+            else(nausea == true)
             checkDisease()
         })
 
@@ -177,7 +177,7 @@
                 button8.style.backgroundColor = 'red';
                 button8.style.color = 'white';
             }
-            else(cold == false)
+            else(cold == true)
             checkDisease()
         })
 
@@ -188,7 +188,7 @@
                 button9.style.backgroundColor = 'red';
                 button9.style.color = 'white';
             }
-            else(pain == false)
+            else(pain == true)
             checkDisease()
         })
 
@@ -199,7 +199,7 @@
                 button10.style.backgroundColor = 'red';
                 button10.style.color = 'white';
             }
-            else(urination == false)
+            else(urination == true)
             checkDisease()
         })
 
@@ -207,17 +207,17 @@
         if(fever == true && cold == true && cough == true){
             disease.style.visibility = "visible";
             diseaseName.innerHTML = "FLU";
-        }else(disease.style.visibility = "hidden");
+        }
 
         if(fever == true && lossOfTaste == true && cough == true && fatigue == true && soreThroat == true){
             disease.style.visibility = "visible";
             diseaseName.innerHTML = "COVID";
-        }else(disease.style.visibility = "hidden");
+        }
 
         if(dio == true && nausea == true && pain == true){
             disease.style.visibility = "visible";
             diseaseName.innerHTML = "DIARHEA";
-        }else(disease.style.visibility = "hidden");
+        }
 
         }
 
