@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        .main >a {
+            width: 150px;
+            margin-left: 150px;
+            color: rgb(65, 65, 65);
+        }
+        #nav-bar{
+            background-color: rgb(1, 30, 68);
+        }
+        #main{
+            background-color: #000000;
+        }
+        #btns{
+            background-color: #090909;
+        }
+        #psblD{
+            color: grey;
+        }
+        #disease-name{
+            color: grey;
+        }
+        #diseases-btn{
+            background-color: rgb(1, 30, 68);
+        }
+        #footer{
+        background-color: rgb(1, 30, 68);
+        }
+    </style>
+</head>
+<body id="main">
+    <nav>
+        <div class="nav-wrapper" id="nav-bar">
+          <a href="#!" class="brand-logo">Report Reader</a>
+          <ul class="right hide-on-med-and-down">
+            <a href = "index.html" id="btns" class="waves-effect waves-light btn click-me-button modal-trigger">
+                <i class="material-icons left">home</i>Home</a>
+              <a href = "about.html" id="btns" class="waves-effect waves-light btn click-me-button modal-trigger">
+                <i class="material-icons left">free_breakfast</i>About</a>
+              <a href="common.html" id="btns" class="waves-effect waves-light btn click-me-button modal-trigger">
+                <i class="material-icons left">mood_bad</i>Disease Checker</a>
+          </ul>
+        </div>
+      </nav>
+      <br>
+        
+        <div class="main" style="width: 50vw; height: 75vh;display: flex;justify-content: space-between;flex-wrap: wrap;flex-direction: row;">
+            <div style = "display: flex; flex-direction: column; gap: 30px;">
+                <a id="diseases-btn" class="waves-effect waves-light btn btn-1">sore throat</a>
+                <a id="diseases-btn" class="waves-effect waves-light btn btn-2">loss of taste</a>
+                <a id="diseases-btn" class="waves-effect waves-light btn btn-3">cough</a>
+                <a id="diseases-btn" class="waves-effect waves-light btn btn-4">fatigue</a>
+                <a id="diseases-btn" class="waves-effect waves-light btn btn-5">fever</a>
+                <a id="diseases-btn" class="waves-effect waves-light btn btn-6">blurry vision</a>
+                <a id="diseases-btn" class="waves-effect waves-light btn btn-7">nausea</a>
+                <a id="diseases-btn" class="waves-effect waves-light btn btn-8">cold</a>
+                <a id="diseases-btn" class="waves-effect waves-light btn btn-9">pain</a>
+                <a id="diseases-btn" class="waves-effect waves-light btn btn-10">urination</a>
+            </div>
+            <div class = "disease" style = "visibility: hidden;">
+                <h3 id="psblD"> Possible Disease: </h3>
+                <h5 class = "disease-name" id="disease-name"></h5>
+            </div>  
+        </div>
+        <br>
+    </div>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        let button1 = document.querySelector(".btn-1");
+        let button2 = document.querySelector(".btn-2");
+        let button3 = document.querySelector(".btn-3");
+        let button4 = document.querySelector(".btn-4");
+        let button5 = document.querySelector(".btn-5");
+        let button6 = document.querySelector(".btn-6");
+        let button7 = document.querySelector(".btn-7");
+        let button8 = document.querySelector(".btn-8");
+        let button9 = document.querySelector(".btn-9");
+        let button10 = document.querySelector(".btn-10");
+        let disease = document.querySelector(".disease");
+        let diseaseName = document.querySelector(".disease-name");
+
+        let soreThroat = false;
+        button1.addEventListener('click', ()=>{  //it adds an event here, if we click the button it wil run the fucntion.
+            if(soreThroat == false){
+                soreThroat=true;
+                button1.style.backgroundColor = 'red';
+                button1.style.color = 'white';
+            }
+            else(soreThroat == false)
+            checkDisease()
+        })
+
+        let lossOfTaste = false;
+        button2.addEventListener('click', ()=>{  //it adds an event here, if we click the button it wil run the fucntion.
+            if(lossOfTaste == false){
+                lossOfTaste=true;
+                button2.style.backgroundColor = 'red';
+                button2.style.color = 'white';
+            }
+            else(lossOfTaste == false)
+            checkDisease()
+        })
+
+        let cough = false;
+        button3.addEventListener('click', ()=>{  //it adds an event here, if we click the button it wil run the fucntion.
+            if(cough == false){
+                cough=true;
+                button3.style.backgroundColor = 'red';
+                button3.style.color = 'white';
+            }
+            else(cough == false)
+            checkDisease()    //calling it everytime to check if all the required symptoms(variables) are true as per the disease.
+        })
+
+        let fatigue = false;
+        button4.addEventListener('click', ()=>{  //it adds an event here, if we click the button it wil run the fucntion.
+            if(fatigue == false){
+                fatigue=true;
+                button4.style.backgroundColor = 'red';
+                button4.style.color = 'white';
+            }
+            else(fatigue == false)
+            checkDisease()
+        })
+
+        let fever = false;
+        button5.addEventListener('click', ()=>{  //it adds an event here, if we click the button it wil run the fucntion.
+            if(fever == false){
+                fever=true;
+                button5.style.backgroundColor = 'red';
+                button5.style.color = 'white';
+            }
+            else(fever == false)
+            checkDisease()
+        })
+
+        let blurryVision = false;
+        button6.addEventListener('click', ()=>{  //it adds an event here, if we click the button it wil run the fucntion.
+            if(blurryVision == false){
+                burryVision =true;
+                button6.style.backgroundColor = 'red';
+                button6.style.color = 'white';
+            }
+            else(blurryVision == false)
+            checkDisease()
+        })
+
+        let nausea = false;
+        button7.addEventListener('click', ()=>{  //it adds an event here, if we click the button it wil run the fucntion.
+            if(nausea == false){
+                nausea=true;
+                button7.style.backgroundColor = 'red';
+                button7.style.color = 'white';
+            }
+            else(nausea == false)
+            checkDisease()
+        })
+
+        let cold = false;
+        button8.addEventListener('click', ()=>{  //it adds an event here, if we click the button it wil run the fucntion.
+            if(cold == false){
+                cold=true;
+                button8.style.backgroundColor = 'red';
+                button8.style.color = 'white';
+            }
+            else(cold == false)
+            checkDisease()
+        })
+
+        let pain = false;
+        button9.addEventListener('click', ()=>{  //it adds an event here, if we click the button it wil run the fucntion.
+            if(pain == false){
+                pain=true;
+                button9.style.backgroundColor = 'red';
+                button9.style.color = 'white';
+            }
+            else(pain == false)
+            checkDisease()
+        })
+
+        let urination = false;
+        button10.addEventListener('click', ()=>{  //it adds an event here, if we click the button it wil run the fucntion.
+            if(urination == false){
+                urination=true;
+                button10.style.backgroundColor = 'red';
+                button10.style.color = 'white';
+            }
+            else(urination == false)
+            checkDisease()
+        })
+
+        function checkDisease(){
+        if(fever == true && cold == true && cough == true){
+            disease.style.visibility = "visible";
+            diseaseName.innerHTML = "FLU";
+        }else(disease.style.visibility = "hidden");
+
+        if(fever == true && lossOfTaste == true && cough == true && fatigue == true && soreThroat == true){
+            disease.style.visibility = "visible";
+            diseaseName.innerHTML = "COVID";
+        }else(disease.style.visibility = "hidden");
+
+        if(dio == true && nausea == true && pain == true){
+            disease.style.visibility = "visible";
+            diseaseName.innerHTML = "DIARHEA";
+        }else(disease.style.visibility = "hidden");
+
+        }
+
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        <footer class="page-footer" id="footer">
+            <div class="container">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="white-text">Report Reader</h5>
+                  <p class="grey-text text-lighten-4">A platform to ease your search for the prescribed medicines</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  <h5 class="white-text">Links</h5>
+                  <ul>
+                    <li><a class="grey-text text-lighten-3" href="about.html">About Us</a></li>
+                    <li><a class="grey-text text-lighten-3" href="common.html">Disease Checker</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="container">
+              © 2022 Copyright Text
+              <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+              </div>
+            </div>
+          </footer>
+      
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="script.js"></script>
+</html>
